@@ -1,6 +1,9 @@
 #include <iostream>
 #include <fstream>
 
+#include "Vec3.h"
+#include "Color.h"
+
 
 int main() {
 	std::ofstream image_file("image.ppm");
@@ -13,15 +16,8 @@ int main() {
 
 	for (int j = 0; j < height; j++) {
 		for (int i = 0; i < width; i++) {
-			double r = double(i) / (width - 1);
-			double g = double(j) / (height - 1);
-			double b = 0;
-
-			int ir = int(255 * r);
-			int ig = int(255 * g);
-			int ib = int(255 * b);
-
-			image_file << ir << ' ' << ig << ' ' << ib << std::endl;
+			auto pixel_color = color(double(i) / (width - 1), double(j) / (height - 1), 0);
+			write_color(image_file, pixel_color);
 		}
 	}
 
