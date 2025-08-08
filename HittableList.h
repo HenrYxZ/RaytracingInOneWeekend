@@ -1,12 +1,10 @@
 #pragma once
 
-#include "Hittable.h"
-
-#include <memory>
 #include <vector>
 
-using std::make_shared;
-using std::shared_ptr;
+#include "Hittable.h"
+#include "Rtweekend.h"
+
 
 class hittable_list : public hittable {
 public:

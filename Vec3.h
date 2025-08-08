@@ -1,7 +1,6 @@
 #pragma once
 
-#include <cmath>
-#include <iostream>
+#include "Rtweekend.h"
 
 class vec3 {
   public:

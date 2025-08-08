@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Ray.h"
+#include "Rtweekend.h"
 
 class hit_record {
 public:
